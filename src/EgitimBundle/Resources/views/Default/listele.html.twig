@@ -1,0 +1,26 @@
+{% extends "@Egitim/Default/index.html.twig" %}
+
+{% block body %}
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>Ad</td>
+            <td>Soyad</td>
+            <td>Düzenle</td>
+            <td>Sil</td>
+        </tr>
+
+    {% for o in ogrenciler %}
+        <tr>
+            <td>{{ o.id }}</td>
+            <td>{{ o.ad }}</td>
+            <td>{{ o.soyad }}</td>
+            <td><a href="{{ path('duzenle',{ 'id' : o.id }) }}">Düzenle</a> </td>
+            <td><a href="{{ path('sil',{ 'id' : o.id }) }}">Sil</a> </td>
+        </tr>
+
+    {% endfor %}
+    </table>
+
+    <a href="{{ path('egitim_anasayfa') }}">Ogrenci Ekle</a>
+{% endblock body %}

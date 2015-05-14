@@ -1,0 +1,23 @@
+egitim_anasayfa:
+    path:     /
+    defaults: { _controller: EgitimBundle:Default:index }
+
+ogrenci_ekle:
+    path:     /ogrenci-ekle
+    defaults: { _controller: EgitimBundle:Default:ogrenciEkle }
+
+listele:
+    path:     /ogrenci-listele
+    defaults: { _controller: EgitimBundle:Default:listele }
+
+duzenle:
+    path:     /ogrenci-duzenle/{id}
+    defaults:  { _controller: EgitimBundle:Default:duzenleForm }
+
+sil:
+    path:     /ogrenci-sil/{id}
+    defaults:  { _controller: EgitimBundle:Default:sil }
+
+guncelle:
+    path:     /ogrenci-guncelle
+    defaults:  { _controller: EgitimBundle:Default:guncelle  }

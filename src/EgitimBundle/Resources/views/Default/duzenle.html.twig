@@ -1,0 +1,16 @@
+{% extends "@Egitim/Default/index.html.twig" %}
+
+{% block body %}
+
+    {% for o in ogrenciler %}
+    <form action="{{ path('guncelle') }}" method="post">
+        <input type="hidden" id="id" name="id" value="{{ o.id }}">
+        <input type="text" name="ad" required="required" placeholder="Adınızı giriniz" value="{{ o.ad }}"><br>
+
+        <input type="text" name="soyad" required="required" placeholder="Soyadınızı giriniz" value="{{ o.soyad }}"><br>
+
+        <input type="submit" name="gonder" value="kaydet">
+    </form>
+    {% endfor %}
+
+{% endblock body %}
